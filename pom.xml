@@ -3,7 +3,7 @@
 
     <groupId>org.querqy</groupId>
     <artifactId>querqy-elasticsearch</artifactId>
-    <version>1.8.es8114.0-SNAPSHOT</version>
+    <version>1.7.es8121.0</version>
     <packaging>jar</packaging>
 
     <prerequisites>
@@ -21,31 +21,16 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>renekrie</id>
-            <name>René Kriegler</name>
-            <email>post@rene-kriegler.com</email>
-            <url>https://github.com/renekrie</url>
-        </developer>
-    </developers>
-
-    <scm>
-        <url>git@github.com:querqy/querqy-elasticsearch.git</url>
-        <connection>scm:git:git@github.com:querqy/querqy-elasticsearch.git</connection>
-        <developerConnection>scm:git:git@github.com:querqy/querqy-elasticsearch.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
 
     <properties>
 
         <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
@@ -56,10 +41,10 @@
         <jts.version>1.19.0</jts.version>
         <json-path.version>2.7.0</json-path.version>
 
-        <querqy.lucene.version>5.7.lucene942.0</querqy.lucene.version>
+        <querqy.lucene.version>5.7.lucene992.0</querqy.lucene.version>
 
-        <elasticsearch.version>8.11.4</elasticsearch.version>
-        <jacoco.version>0.8.12</jacoco.version>
+        <elasticsearch.version>8.12.1</elasticsearch.version>
+        <jacoco.version>0.8.10</jacoco.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 
@@ -109,7 +94,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.25.3</version>
+            <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -248,7 +233,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.2</version>
+                        <version>3.0.1</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -257,8 +242,8 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <keyname>${gpg.keyname}</keyname>
-                                    <passphraseServerId>${gpg.keyname}</passphraseServerId>
+                                    <keyname>KeyName</keyname>
+                                    <passphraseServerId>keyName</passphraseServerId>
                                 </configuration>
                             </execution>
                         </executions>

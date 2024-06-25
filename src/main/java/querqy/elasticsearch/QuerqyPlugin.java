@@ -106,19 +106,9 @@ public class QuerqyPlugin extends Plugin implements SearchPlugin, ActionPlugin {
         ));
     }
 
+
     @Override
-    public Collection<Object> createComponents(final Client client, final ClusterService clusterService,
-                                               final ThreadPool threadPool,
-                                               final ResourceWatcherService resourceWatcherService,
-                                               final ScriptService scriptService,
-                                               final NamedXContentRegistry xContentRegistry,
-                                               final Environment environment, final NodeEnvironment nodeEnvironment,
-                                               final NamedWriteableRegistry namedWriteableRegistry,
-                                               final IndexNameExpressionResolver indexNameExpressionResolver,
-                                               final Supplier<RepositoriesService> repositoriesServiceSupplier,
-                                               final TelemetryProvider telemetryProvider,
-                                               final AllocationService allocationService,
-                                               final IndicesService indicesService) {
+    public Collection<?> createComponents(PluginServices services) {
         return Arrays.asList(rewriterShardContexts, querqyProcessor);
     }
 
